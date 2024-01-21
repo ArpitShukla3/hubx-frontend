@@ -4,12 +4,14 @@ import toast, { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 import { apiPost } from '../../apiList';
 import { ListState } from '../Context/ContextProvider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRectangleXmark } from '@fortawesome/free-regular-svg-icons';
 
-const ImageUpload = ({setShow}) => {
+const ImageUpload = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [pic,setPic] = useState();
-  const {list,setList}=ListState()
+  const {list,setList,setShow,show}=ListState()
   function dismissAndReturn(val)
   {
       toast.dismiss();
@@ -68,7 +70,8 @@ const ImageUpload = ({setShow}) => {
     }
   };
   return (
-    <div className='z-10 '>
+    <div className='z-10 bg-[#F5EEE6]'>
+     <div className='float-right cursor-pointer' onClick={()=>setShow(false)}><FontAwesomeIcon icon={faRectangleXmark} style={{color: "#B197FC",}} size='2xl' /></div>
     <Container maxWidth="sm"  style={{ background: '#F5EEE6' }}>
       <Paper elevation={3} className="p-6"  style={{ background: '#F5EEE6' }}>
         <Typography variant="h4" align="center" gutterBottom>

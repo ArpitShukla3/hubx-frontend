@@ -3,12 +3,14 @@ const ListContext = createContext();
 function ContextProvider({ children }) {
   const [list,setList] = useState([]);
   const [page,setPage] = useState(0);
+  const [show, setShow] = useState(false);
   return (
     <ListContext.Provider
       value={{
         list,
         setList,
-        page,setPage
+        page,setPage,
+        show, setShow
       }}
     >{children}</ListContext.Provider>
   )

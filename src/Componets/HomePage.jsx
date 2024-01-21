@@ -12,9 +12,7 @@ import axios from "axios";
 import { apiImages } from "../../apiList";
 import "./face.css"
 const HomePage = () => {
-  const [show, setShow] = useState(false);
- 
-  const { list ,setList,page,setPage} = ListState();
+  const { list ,setList,page,setPage,show, setShow} = ListState();
   async function download(){
     try{
       const val= await axios.get(`${apiImages}/${page}`,{withCredentials:true});
