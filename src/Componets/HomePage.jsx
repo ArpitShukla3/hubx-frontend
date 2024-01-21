@@ -10,7 +10,6 @@ import Facebook from './Facebook';
 import { ListState } from '../Context/ContextProvider';
 import axios from "axios";
 import { apiImages } from "../../apiList";
-import CustomPagination from "./customPagination";
 const HomePage = () => {
   const [show, setShow] = useState(false);
  
