@@ -12,7 +12,7 @@ const Navbar = () => {
     try {
       await axios.post(apiLogout,{name:"name"},{withCredentials:true});
       toast.success("Logout")
-      navigateTo("/login");
+      navigateTo("/");
     } catch (error) {
       toast.error(error.message)
     }
