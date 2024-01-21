@@ -32,6 +32,7 @@ export default function Auth() {
             toast.success("Login")
             navigateTo("/home")
         } catch (error) {
+            toast.dismiss();
             toast.error(error.message)
         }
     }
