@@ -73,14 +73,15 @@ export default function Facebook(props) {
           </React.Fragment>
         ) : (
           <Typography variant="body2" color="text.secondary" component="p">
-            <div>
-              <h3>Views: {views}</h3>
-            <div className={`text-orange-800 ${getAdjustment()}`}>
+            <>
+              {<span>Views: {views}</span>}
+              <br/>
+            <span className={`text-orange-800 ${getAdjustment()}`}>
              {desc}
-             </div>
+             </span>
              {!readMore&&lengthy &&<Button onClick={()=>setReadMore(true)}>Readmore</Button>}
               {readMore&&<Button onClick={()=>setReadMore(false)}>Show less</Button>}
-             </div>
+             </>
           </Typography>
         )}
       </CardContent>
