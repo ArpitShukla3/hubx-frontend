@@ -10,6 +10,7 @@ import Facebook from './Facebook';
 import { ListState } from '../Context/ContextProvider';
 import axios from "axios";
 import { apiImages } from "../../apiList";
+import "./face.css"
 const HomePage = () => {
   const [show, setShow] = useState(false);
  
@@ -43,11 +44,29 @@ const HomePage = () => {
       toast.error("Last page reached")
     }
   }
+  function getBackground()
+  {
+    if(show)
+    {
+      return `bg-slate-800 `;
+    }
+    else
+    {
+      return `bg-slate-600`;
+    }
+  }
+  function overlayCSS()
+  {
+    if(show)
+    {
+      return  `overlay`
+    }
+  }
   useEffect(()=>{
     download();
   },[page])
   return (
-    <div className='h-full bg-slate-800 min-h-screen '>
+    <div className={`h-full ${getBackground()} min-h-screen z-0 ${overlayCSS()}}`}  >
       <div className='fixed top-0 bg-slate-100 w-full'>
         <Navbar />
       </div>

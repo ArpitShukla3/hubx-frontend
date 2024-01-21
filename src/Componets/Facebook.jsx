@@ -38,7 +38,7 @@ export default function Facebook(props) {
     }
   }
   return (
-    <Card sx={{ maxWidth: 600, m: 2 ,minWidth:345}}>
+    <Card sx={{   m: 2, width:600,color:"white"}} >
       <CardHeader
         title={
           !topic? (

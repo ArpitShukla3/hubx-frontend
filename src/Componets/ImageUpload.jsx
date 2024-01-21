@@ -68,9 +68,9 @@ const ImageUpload = ({setShow}) => {
     }
   };
   return (
-    <div className='z-10'>
-    <Container maxWidth="sm" className="mt-8">
-      <Paper elevation={3} className="p-6">
+    <div className='z-10 '>
+    <Container maxWidth="sm"  style={{ background: '#F5EEE6' }}>
+      <Paper elevation={3} className="p-6"  style={{ background: '#F5EEE6' }}>
         <Typography variant="h4" align="center" gutterBottom>
           Image Upload
         </Typography>
