@@ -14,6 +14,7 @@ const Navbar = () => {
       toast.success("Logout")
       navigateTo("/");
     } catch (error) {
+      toast.dismiss()
       toast.error(error.message)
     }
   }

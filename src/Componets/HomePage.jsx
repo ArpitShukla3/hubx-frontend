@@ -20,6 +20,7 @@ const HomePage = () => {
         setList( val.data.data );
         toast.dismiss();
     } catch(err) {
+      toast.dismiss()
       toast.error(err.message)
     }
   }

@@ -9,12 +9,10 @@ async function update(parameters) {
     const { _id, views } = parameters;
     await axios.post(apiImageView, { id: _id, views: views + 1 });
  } catch (error) {
+    toast.dismiss()
     toast.error(error.message)
  }
 }
-
-// function update(parameters) {
-//       fetchData(parameters) ;
-// }
+ 
 
 export default update;
